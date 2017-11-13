@@ -9,3 +9,12 @@ The magic method for the del statement is __del__.
 The process of deleting objects when they are no longer needed is called garbage collection.
 In summary, an object's reference count increases when it is assigned a new name or placed in a container (list, tuple, or dictionary). The object's reference count decreases when it's deleted with del, its reference is reassigned, or its reference goes out of scope. When an object's reference count reaches zero, Python automatically deletes it.
 """
+
+a = 42  # Create object <42>
+b = a  # Increase ref. count  of <42> 
+c = [a]  # Increase ref. count  of <42> 
+
+del a  # Decrease ref. count  of <42>
+b = 100  # Decrease ref. count  of <42> 
+c[0] = -1  # Decrease ref. count  of <42>
+           # Lower level languages like C don't have this kind of automatic memory management.
