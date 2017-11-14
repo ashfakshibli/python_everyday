@@ -17,6 +17,10 @@ print(pizza.pineapple_allowed)
 
 
 """
+Properties provide a way of customizing access to instance attributes. 
+They are created by putting the property decorator above a method, which means when the instance attribute with the same name as the method is accessed, the method will be called instead. 
+
+One common use of a property is to make an attribute read-only.
 Properties can also be set by defining setter/getter functions.
 The setter function sets the corresponding property's value.
 The getter gets the value.
